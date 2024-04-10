@@ -1,4 +1,4 @@
-package lisen5Zadanie7;
+package lisen5Zadanie8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Main {
 
     public static int C ;
-    public static int T ;
     static int count = 0;
     public static int Delitel;
     public static void main(String[] args) {
@@ -21,9 +20,7 @@ public class Main {
         Scanner in2 = new Scanner(System.in);
         System.out.println("после какого числа вывисти");
         C = in2.nextInt();
-        Scanner in3 = new Scanner(System.in);
-        System.out.println("Какая длина будет от 1-3 (0-500)");
-        T = in3.nextInt();
+
 
 
         List<String> list = new ArrayList<String>();
@@ -51,15 +48,8 @@ public class Main {
         boolean ok = false;
         for (int k= 0; k < res.length ; k++) {
             if (res[k] >= C) {
-                String[] a =Arrays.toString(res).split("[\\[\\]]")[k].split(", ");
-             if (a.length<T) {
-
-                 System.out.print(res[k] + " ");
-                 ok = true;
-             }
-
-
-
+                System.out.print(res[k]+" ");
+                ok = true;
             } else {
                 ok = false;
             }
