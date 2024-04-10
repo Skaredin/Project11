@@ -7,10 +7,11 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static int C ;
-    public static int T ;
+    public static int C;
+    public static int T;
     static int count = 0;
     public static int Delitel;
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Vedite chislo kotoroe budet sodergaca");
@@ -21,13 +22,10 @@ public class Main {
         Scanner in2 = new Scanner(System.in);
         System.out.println("после какого числа вывисти");
         C = in2.nextInt();
-        Scanner in3 = new Scanner(System.in);
-        System.out.println("Какая длина будет от 1-3 (0-500)");
-        T = in3.nextInt();
 
 
         List<String> list = new ArrayList<String>();
-        for (int i = 101; i < 501; i++) {
+        for (int i = 0; i < 2000; i++) {
             list.add(i + "");
         }
         boolean matchedSuffix = false;
@@ -44,26 +42,24 @@ public class Main {
         }
 
         int[] res = getDivisibleNumbers(intArr, Delitel);
-        System.out.println("Числа делящийся на "+Delitel+"->"+Arrays.toString(res));
+        System.out.println("Числа делящийся на " + Delitel + "->" + Arrays.toString(res));
 
+        String longest = strArr[0];
+        System.out.print("Какую длину показать от 1 до 4");
 
-        System.out.print("Строки которые имеют длину больше заданного = "+C+" --> ");
-        boolean ok = false;
-        for (int k= 0; k < res.length ; k++) {
-            if (res[k] >= C) {
-                String[] a =Arrays.toString(res).split("[\\[\\]]")[k].split(", ");
-             if (a.length<T) {
+        Scanner in3 = new Scanner(System.in);
+        T = in3.nextInt();
 
-                 System.out.print(res[k] + " ");
-                 ok = true;
-             }
-
-
-
-            } else {
-                ok = false;
+        for (String s : strArr)
+        {
+            if (longest.length() >= T) {
+                longest = s;
+                System.out.println("Longest Word: " + longest + " lenght: " + longest.length());
             }
         }
+
+
+
 
     }
 
@@ -75,6 +71,7 @@ public class Main {
 
         return result;
     }
+
     public static int[] getDivisibleNumbers(int[] numbers, int divider) {
         return Arrays.stream(numbers)
                 .filter(numb -> numb % divider == 0 && numb > 0)
