@@ -1,7 +1,6 @@
 package lisen5Zadanie5;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
