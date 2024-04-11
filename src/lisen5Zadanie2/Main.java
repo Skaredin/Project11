@@ -1,9 +1,7 @@
 package lisen5Zadanie2;
-
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -29,6 +27,7 @@ public class Main {
                 }
             }
         }
+        System.out.println("Prinimaet iz 2 v 1: " + Arrays.toString(combined));
         int[] result = Arrays.copyOf(combined, counter);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + " ");
