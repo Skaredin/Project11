@@ -1,4 +1,4 @@
-package lisen5Zadanie8;
+package lisen5Zadanie10;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-
     public static int C ;
     static int count = 0;
     public static int Delitel;
@@ -44,10 +43,10 @@ public class Main {
         System.out.println("Числа делящийся на "+Delitel+"->"+Arrays.toString(res));
 
 
-        System.out.print("Значение больше заданного = "+C+" --> ");
+        System.out.print("Значение мнеше заданного = "+C+" --> ");
         boolean ok = false;
         for (int k= 0; k < res.length ; k++) {
-            if (res[k] >= C) {
+            if (res[k] <= C) {
                 System.out.print(res[k]+" ");
                 ok = true;
             } else {
