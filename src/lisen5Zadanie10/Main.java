@@ -20,8 +20,6 @@ public class Main {
         System.out.println("после какого числа вывисти");
         C = in2.nextInt();
 
-
-
         List<String> list = new ArrayList<String>();
         for (int i = 101; i < 501; i++) {
             list.add(i + "");

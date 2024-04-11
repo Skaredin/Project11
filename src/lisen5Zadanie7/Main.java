@@ -19,10 +19,6 @@ public class Main {
         Scanner in1 = new Scanner(System.in);
         System.out.println("Насколько будет делится");
         Delitel = in1.nextInt();
-        Scanner in2 = new Scanner(System.in);
-        System.out.println("после какого числа вывисти");
-        C = in2.nextInt();
-
 
         List<String> list = new ArrayList<String>();
         for (int i = 0; i < 2000; i++) {
@@ -44,23 +40,22 @@ public class Main {
         int[] res = getDivisibleNumbers(intArr, Delitel);
         System.out.println("Числа делящийся на " + Delitel + "->" + Arrays.toString(res));
 
-        String longest = strArr[0];
-        System.out.print("Какую длину показать от 1 до 4");
+        String longest = Arrays.toString(strArr);
+        System.out.print("Какую длину показать от 1 до "+ longest.length());
 
         Scanner in3 = new Scanner(System.in);
         T = in3.nextInt();
 
+           int i = T;
         for (String s : strArr)
         {
             if (longest.length() >= T) {
                 longest = s;
-                System.out.println("Longest Word: " + longest + " lenght: " + longest.length());
+
             }
+            System.out.println("Longest Word: " + s + " lenght: " + i);
+            i++;
         }
-
-
-
-
     }
 
     public static List<String> binarySerchOverList(List<String> list, String prefix) {

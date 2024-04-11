@@ -6,7 +6,7 @@ public class Main {
         int i = 9;
         Oc counter = new Oc();
         System.out.println("Kol-vo deistvii: "
-                + counter.occurrenceOfСount(0, 200, 300, 1000));
+                + counter.occurrenceOfСount(0, 200, 0, 1000));
         System.out.println("Tak budet interesnei s min i max cem i*i="+ i*i +" ");
     }
 

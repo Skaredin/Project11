@@ -2,11 +2,12 @@ package lisen5Zadanie9;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
-
-
 public class Main {
     public static void main(String[] args) {
-        String[] elements = new String[]{"Bread", "Milk", "Cereal", "Coffee", "321", "421", "444", "@#@#", "!!!!", "@@#$", "!3$!", "%#%%rw3","Картошка", "Свекла", "Трактор", "Терапефт", "51251вфц", "5765вфа", "3344", "?!%:(!%:", "(№%?%(№)", "!);*;?%", ")(%№_%", "И тод"};
+        String[] elements = new String[]{"Bread", "Milk", "Cereal", "Coffee", "321", "421", "444", "@#@#", "!!!!", "@@#$", "!3$!",
+                "%#%%rw3","Картошка", "Свекла", "Трактор", "Терапефт", "51251вфц", "5765вфа",
+                "3344", "?!%:(!%:", "(№%?%(№)", "!);*;?%", ")(%№_%", "И тод"};
+
         for (int i = 0; i < 15; i++) {
             final String[] array = generateRandomArrayFromElements(elements);
             System.out.println(Arrays.toString(array));

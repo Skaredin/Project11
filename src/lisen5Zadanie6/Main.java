@@ -1,12 +1,9 @@
 package lisen5Zadanie6;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
 public class Main {
-
 
     static int count = 0;
     public static int Delitel;
